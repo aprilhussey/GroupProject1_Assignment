@@ -26,11 +26,21 @@ public class ButtonFunctions : MonoBehaviour
 
     public void OpenOptions()
     { 
-        // SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Options");
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void BackToGame()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
