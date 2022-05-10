@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - ItemPickUp
-  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -51,7 +50,4 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1256471245
-    locked: 0
-  - name: UI
-    uniqueID: 1265762723
     locked: 0
