@@ -73,8 +73,6 @@ public class PlayerControlScript : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics2D.IsTouchingLayers(GetComponent<CapsuleCollider2D>(), LayerMask.GetMask("Platform"));
-        Debug.Log(isGrounded);
-
         // Apply movement velocity
         r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
     }
