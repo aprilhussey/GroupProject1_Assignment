@@ -11,9 +11,15 @@ public class PlayerDash : MonoBehaviour
     public float maxDash = 1f;
     public Vector2 savedVelocity;
 
+    public GameObject HUD;
+    private UIScript UiScript;
+
+    bool isDashKeyDown = false;
+
     void Start()
     {
         r2d = GetComponent<Rigidbody2D>();
+        UiScript = HUD.GetComponent<UIScript>();
     }
 
     // Update is called once per frame
@@ -22,7 +28,14 @@ public class PlayerDash : MonoBehaviour
         switch (dashState)
         {
             case DashState.Ready:
-                var isDashKeyDown = Input.GetKeyDown(KeyCode.X);
+                if (Input.GetKeyDown(KeyCode.X) || UiScript.dashButton)
+                {
+                    isDashKeyDown = true;
+                }
+                else
+                {
+                    isDashKeyDown = false;
+                }
                 if (isDashKeyDown)
                 {
                     savedVelocity = r2d.velocity;

@@ -2056,7 +2056,6 @@ GameObject:
   m_Component:
   - component: {fileID: 431720122}
   - component: {fileID: 431720123}
-  - component: {fileID: 431720124}
   m_Layer: 5
   m_Name: RightControl
   m_TagString: Untagged
@@ -2111,18 +2110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &431720124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431720121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515991c6ef65f7548acbcc418b50b8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &439197416
 GameObject:
   m_ObjectHideFlags: 0
@@ -30669,6 +30656,7 @@ GameObject:
   - component: {fileID: 1010045481}
   - component: {fileID: 1010045480}
   - component: {fileID: 1010045479}
+  - component: {fileID: 1010045483}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -30761,6 +30749,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1010045483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010045478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515991c6ef65f7548acbcc418b50b8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftArrow: 0
+  rightArrow: 0
+  jumpButton: 0
+  dashButton: 0
 --- !u!1 &1010638804
 GameObject:
   m_ObjectHideFlags: 0
@@ -31104,7 +31108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1227042328}
   - component: {fileID: 1227042329}
-  - component: {fileID: 1227042330}
   m_Layer: 5
   m_Name: LeftControl
   m_TagString: Untagged
@@ -31159,18 +31162,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &1227042330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227042327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515991c6ef65f7548acbcc418b50b8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1232764776
 GameObject:
   m_ObjectHideFlags: 0
@@ -31368,7 +31359,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1240199445}
   - component: {fileID: 1240199446}
-  - component: {fileID: 1240199447}
   m_Layer: 5
   m_Name: DashControl
   m_TagString: Untagged
@@ -31423,18 +31413,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &1240199447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240199444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515991c6ef65f7548acbcc418b50b8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1265010984
 GameObject:
   m_ObjectHideFlags: 0
@@ -32084,7 +32062,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1441158295}
   - component: {fileID: 1441158296}
-  - component: {fileID: 1441158297}
   m_Layer: 5
   m_Name: JumpControl
   m_TagString: Untagged
@@ -32139,18 +32116,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &1441158297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441158294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 515991c6ef65f7548acbcc418b50b8d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1528353155
 GameObject:
   m_ObjectHideFlags: 0
@@ -32688,6 +32653,7 @@ MonoBehaviour:
   dashTimer: 0
   maxDash: 1
   savedVelocity: {x: 0, y: 0}
+  HUD: {fileID: 1010045478}
 --- !u!114 &1593631109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32703,6 +32669,7 @@ MonoBehaviour:
   maxSpeed: 5
   jumpHeight: 10
   gravityScale: 1.5
+  HUD: {fileID: 1010045478}
 --- !u!70 &1593631110
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

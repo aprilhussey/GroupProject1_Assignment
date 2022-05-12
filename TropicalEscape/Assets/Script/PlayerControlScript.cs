@@ -8,9 +8,13 @@ using UnityEngine;
 public class PlayerControlScript : MonoBehaviour
 {
     // Move player in 2D space
-    public float maxSpeed = 3.4f;
-    public float jumpHeight = 6.5f;
+    public float maxSpeed = 5f;
+    public float jumpHeight = 10f;
     public float gravityScale = 1.5f;
+
+    public GameObject HUD;
+    
+    private UIScript UiScript;
 
     bool facingRight = true;
     float moveDirection = 0;
@@ -30,15 +34,23 @@ public class PlayerControlScript : MonoBehaviour
         r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
         gameObject.tag = "Player";
+        UiScript = HUD.GetComponent<UIScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Movement controls
-        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if ((Input.GetKey(KeyCode.LeftArrow) || UiScript.leftArrow || Input.GetKey(KeyCode.RightArrow) || UiScript.rightArrow) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
         {
-            moveDirection = Input.GetKey(KeyCode.LeftArrow) ? -1 : 1;
+            if (Input.GetKey(KeyCode.LeftArrow) || UiScript.leftArrow)
+            {
+                moveDirection = -1;
+            }
+            else
+            {
+                moveDirection = 1;
+            }
         }
         else
         {
@@ -64,7 +76,7 @@ public class PlayerControlScript : MonoBehaviour
         }
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space) || UiScript.jumpButton) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
         }
