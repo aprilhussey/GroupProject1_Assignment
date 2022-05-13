@@ -6,15 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 1d2f08d9b04b0fc419dc503fd33559a9
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9d6f43460c9599a469af87f3d8bb29c4
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 9d5628c3519080e44bc8ac25834e9f81
   - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: 1cc33a8a935c76e4c95cf7e2d495785b
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/OptionsPause.unity
+    guid: 97f6b9b524fdd7a4db1dc67d25636f5e
+  - enabled: 1
+    path: Assets/Scenes/YouWIn.unity
+    guid: ae2f612fdb09d0749bb37adc92fa9e8b
+  - enabled: 1
+    path: Assets/Scenes/YouLost.unity
+    guid: 5b2ebb322939b27479eb33077928bead
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: abf4b5fd0bd316b49aac96381293e106
   m_configObjects: {}
