@@ -6,16 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class ButtonFunctions : MonoBehaviour
 {
+    public int previousScene;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void PlayGame()
@@ -25,7 +27,8 @@ public class ButtonFunctions : MonoBehaviour
     }
 
     public void OpenOptions()
-    { 
+    {
+        previousScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene("Options");
     }
 
@@ -42,5 +45,10 @@ public class ButtonFunctions : MonoBehaviour
     public void BackToGame()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void LeaveOptions()
+    {
+        SceneManager.LoadScene(previousScene);
     }
 }
