@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour
 
     bool changeDirection = false;
     public Transform groundCheckPos;
+    public Transform wallCheckPos;
     public LayerMask groundLayer;
 
     // Start is called before the first frame update
@@ -35,7 +36,11 @@ public class EnemyPatrol : MonoBehaviour
     void FixedUpdate()
     {
         r2d.velocity = new Vector2(moveDirection * moveSpeed, r2d.velocity.y);
-        changeDirection = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+        changeDirection = Physics2D.OverlapCircle(wallCheckPos.position, 0.1f, groundLayer);
+        if (!changeDirection)
+        {
+        	changeDirection = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+	   }
     }
 
     void LateUpdate()
