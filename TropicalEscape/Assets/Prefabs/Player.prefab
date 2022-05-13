@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6878731237144030556}
   - component: {fileID: 6878731237144030557}
+  - component: {fileID: 5467724310232601168}
   - component: {fileID: 6878731237144030554}
   - component: {fileID: 6878731237144030555}
   - component: {fileID: 6878731237144030558}
@@ -18,6 +19,7 @@ GameObject:
   - component: {fileID: 6878731237144030625}
   - component: {fileID: 6878731237144030626}
   - component: {fileID: 1593631108}
+  - component: {fileID: 3109983853885283516}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -92,6 +94,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!114 &5467724310232601168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878731237144030552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f22145c8586da4894f3919dfc057ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 3.4
+  jumpHeight: 6.5
+  gravityScale: 1.5
+  mainCamera: {fileID: 0}
 --- !u!61 &6878731237144030554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -267,3 +285,19 @@ MonoBehaviour:
   coconutVelocity: 100
   coconutAmount: 0
   coconutAmountDisplay: {fileID: 0}
+--- !u!70 &3109983853885283516
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878731237144030552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
